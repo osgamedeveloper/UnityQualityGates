@@ -1,0 +1,28 @@
+TestsQualityGate|Failed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest|System.ArgumentException : Must specify valid information for parsing in the string. | 
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest|System.ArgumentException : Must specify valid information for parsing in the string. | 
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest|System.ArgumentException : Must specify valid information for parsing in the string. | 
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest|System.ArgumentException : Requested value 'c' was not found. | 
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectInt|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectInt|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_GetBuildParameter_NoError|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_GetBuildParameter_NoError|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_HaveBuildParameter_NoError|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_HaveBuildParameter_NoError|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_TryGetBuildParameter_NoError|Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_TryGetBuildParameter_NoError|Passed
+CICD.Tests.CICDTests.PlayerSettings_Version_IsNotEmpty|Passed
+MissedRefsQualityGate|Failed
+MissedRefsQualityGate|MISSED SCRIPTS IN THE PREFAB GameObject
+MissedRefsQualityGate|MISSED SCRIPT ON SCENE  IN Main Camera
+MissedRefsQualityGate|MISSED SCRIPT ON SCENE  IN GameObject
+MissedRefsQualityGate|THE SCENE  HAS 2 MISSED REFS
+False
