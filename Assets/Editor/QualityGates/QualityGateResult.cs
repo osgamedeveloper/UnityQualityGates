@@ -8,12 +8,13 @@ namespace CICD
     [Serializable]
     public class QualityGateResult
     {
-        public bool Passed { get; private set; }
-        public string Name { get; private set; }
-        public string Classname { get; private set; }
-        public long Time { get; private set; }
-        public string SystemOut { get; private set; }
-        public string FailureMessage { get; private set; }
+        //Fields should be private set but standart JsonUtility only works with this.
+        //In case of newtonsoft we can use private setters.
+        public bool Passed;
+        public string Name;
+        public string Classname;
+        public string SystemOut;
+        public string FailureMessage;
 
         public QualityGateResult(bool passed, string name, string classname, string systemOut, string failureMessage)
         {

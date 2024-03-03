@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +6,7 @@ using UnityEngine;
 using Exception = System.Exception;
 using Utils;
 using System.IO;
+using Unity.Plastic.Newtonsoft.Json;
 
 namespace CICD
 {
@@ -40,7 +40,7 @@ namespace CICD
 
             if (string.IsNullOrWhiteSpace(outputPath))
             {
-                outputPath = $"ci/qg/runResult.txt";
+                outputPath = $"cicdresults/qg/runResult.txt";
             }
 
             BuilderTools.InitializePath(outputPath);
@@ -50,8 +50,6 @@ namespace CICD
                 new TestsQualityGate(),
                 new MissedRefsQualityGate(),
             };
-
-            string result = "";
 
             foreach (IQualityGate gate in gates)
             {
@@ -68,21 +66,21 @@ namespace CICD
                     await Task.Delay(1000);
                     waitedSeconds++;
                 }
-                result += $"{gate.Name}:{gate.Status}{Environment.NewLine}";
-                foreach (var qgResult in gate.GetResults())
-                {
-                    result += $"{qgResult.Classname}:{(qgResult.Passed ? "Passed" : qgResult.FailureMessage)}{Environment.NewLine}";
-                }
             }
 
             bool qgPassed = gates.All(gate => gate.Status == QualityGateStatus.Passed);
 
-            result += qgPassed ? "QG Passed":"QG Failed";
+            var toJsonClass = new
+            {
+                QualityGateResult = qgPassed ? "Passed" : "Failed",
+                results = gates.SelectMany(a => a.GetResults()).ToArray(), 
+            };
+            var json = JsonConvert.SerializeObject(toJsonClass, Formatting.Indented);
 
-            File.WriteAllText(outputPath, result);
+            File.WriteAllText(outputPath, json);
 
             if (Application.isBatchMode)
-                EditorApplication.Exit(1);
+                EditorApplication.Exit(qgPassed ? 0 : 1);
             else
                 EditorUtility.RevealInFinder(outputPath);
         }
