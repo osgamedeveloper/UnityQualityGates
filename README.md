@@ -21,6 +21,37 @@ Just copy the existing Assets/Editor folder to your project and it's ready to go
    ```sh
    Unity.exe -batchmode -projectPath %ProjectPath% -executeMethod CICD.CICDQualityGatesRunner.RunQualityGates -outputPath result.txt
    ```
+5. Example of output:
+```result.txt
+TestsQualityGate:Failed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest:System.ArgumentException : Must specify valid information for parsing in the string.
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest:System.ArgumentException : Must specify valid information for parsing in the string.
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest:System.ArgumentException : Must specify valid information for parsing in the string.
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest:System.ArgumentException : Requested value 'c' was not found.
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectInt:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectInt:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_GetBuildParameter_NoError:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_GetBuildParameter_NoError:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_HaveBuildParameter_NoError:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_HaveBuildParameter_NoError:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_TryGetBuildParameter_NoError:Passed
+CICD.Tests.CICDTests.ArgsBuilderTools_TryGetBuildParameter_NoError:Passed
+CICD.Tests.CICDTests.PlayerSettings_Version_IsNotEmpty:Passed
+MissedRefsQualityGate:Failed
+MissedRefsQualityGate:Missed scrpits in the prefab : PrefabWithMissingScript
+MissedRefsQualityGate:Missed scripts on the scene:  in Main Camera
+MissedRefsQualityGate:Missed scripts on the scene:  in InstanceOfThePrefab
+MissedRefsQualityGate:The scene  has 2 missed refs.
+QG Failed
+```
 
 ## Usage
 
