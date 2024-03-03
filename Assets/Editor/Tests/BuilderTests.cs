@@ -80,6 +80,7 @@ namespace CICD.Tests
         public void ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest(string value, BuildTarget result)
         {
             BuildTarget parsedValue = BuilderTools.ConvertStringToValue<BuildTarget>(value);
+
             Assert.AreEqual(result, parsedValue);
         }
     }

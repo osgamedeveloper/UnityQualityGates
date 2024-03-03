@@ -51,23 +51,6 @@ namespace CICD
                 new MissedRefsQualityGate(),
             };
 
-            if (Application.isBatchMode)
-            {
-                if (BuilderTools.TryGetBuildParameter("gates", out string gateNames))
-                {
-                    string[] gateNamesArray = gateNames.Replace(" ","").Split(",").ToArray();
-
-                    List<IQualityGate> newGates = new List<IQualityGate>();
-                    foreach (var gate in gates)
-                    {
-                        if (gateNamesArray.Any(gateName=>gateName.Equals(gate.Name, StringComparison.OrdinalIgnoreCase)))
-                            newGates.Add(gate);
-                    }
-
-                    gates = newGates;
-                }
-            }
-
             string result = "";
 
             foreach (IQualityGate gate in gates)
@@ -85,8 +68,7 @@ namespace CICD
                     await Task.Delay(1000);
                     waitedSeconds++;
                 }
-                //Here should be an xml file compilation (as for a gitlab for example) but for the test work we can stay with it ^^
-                result += $"{gate.Name}|{gate.Status}{Environment.NewLine}";
+                result += $"{gate.Name}:{gate.Status}{Environment.NewLine}";
                 foreach(var qgResult in gate.GetResults())
                     result += $"{qgResult.Classname}|{(qgResult.Passed?"Passed": qgResult.FailureMessage)}{Environment.NewLine}";
             }

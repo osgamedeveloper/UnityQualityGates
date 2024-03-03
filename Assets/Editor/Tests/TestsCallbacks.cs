@@ -1,6 +1,5 @@
 using System;
 using UnityEditor.TestTools.TestRunner.Api;
-using UnityEngine;
 
 namespace CICD
 {
@@ -12,16 +11,10 @@ namespace CICD
             ResultCallback?.Invoke(result);
         }
 
-        public void RunStarted(ITestAdaptor testsToRun)
-        {
-        }
+        public void RunStarted(ITestAdaptor testsToRun) { }
 
-        public void TestFinished(ITestResultAdaptor result)
-        {
-        }
+        public void TestFinished(ITestResultAdaptor result) { }
 
-        public void TestStarted(ITestAdaptor test)
-        {
-        }
+        public void TestStarted(ITestAdaptor test) { }
     }
 }

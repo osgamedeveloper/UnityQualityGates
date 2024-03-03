@@ -2,7 +2,7 @@ using System;
 
 namespace CICD
 {
-    //General tests serialization format
+    //General tests serialization format for gitlab.
     [Serializable]
     public class QualityGateResult
     {
