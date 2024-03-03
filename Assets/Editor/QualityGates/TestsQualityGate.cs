@@ -73,7 +73,7 @@ namespace CICD
                         Name,
                         testName,
                         resultAdaptor.Message,
-                        isPassed ? "" : $"{resultAdaptor.Message}:{resultAdaptor.Output}"));
+                        isPassed ? "" : $"{resultAdaptor.Message}"));
             }
         }
     }
