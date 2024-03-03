@@ -27,74 +27,9 @@ Just copy the existing Assets/Editor folder to your project and it's ready to go
   "QualityGateResult": "Failed",
   "results": [
     {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBoolean",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTarget",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
       "Passed": false,
       "Name": "TestsQualityGate",
       "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest",
-      "Time": 0,
       "SystemOut": "System.ArgumentException : Must specify valid information for parsing in the string.",
       "FailureMessage": "System.ArgumentException : Must specify valid information for parsing in the string."
     },
@@ -102,7 +37,6 @@ Just copy the existing Assets/Editor folder to your project and it's ready to go
       "Passed": false,
       "Name": "TestsQualityGate",
       "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest",
-      "Time": 0,
       "SystemOut": "System.ArgumentException : Must specify valid information for parsing in the string.",
       "FailureMessage": "System.ArgumentException : Must specify valid information for parsing in the string."
     },
@@ -110,15 +44,6 @@ Just copy the existing Assets/Editor folder to your project and it's ready to go
       "Passed": false,
       "Name": "TestsQualityGate",
       "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest",
-      "Time": 0,
-      "SystemOut": "System.ArgumentException : Must specify valid information for parsing in the string.",
-      "FailureMessage": "System.ArgumentException : Must specify valid information for parsing in the string."
-    },
-    {
-      "Passed": false,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectBuildTargetErrorsForATest",
-      "Time": 0,
       "SystemOut": "System.ArgumentException : Requested value 'c' was not found.",
       "FailureMessage": "System.ArgumentException : Requested value 'c' was not found."
     },
@@ -126,71 +51,6 @@ Just copy the existing Assets/Editor folder to your project and it's ready to go
       "Passed": true,
       "Name": "TestsQualityGate",
       "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectInt",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_ConvertStringToValue_CorrectInt",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_GetBuildParameter_NoError",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_GetBuildParameter_NoError",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_HaveBuildParameter_NoError",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_HaveBuildParameter_NoError",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_TryGetBuildParameter_NoError",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.ArgsBuilderTools_TryGetBuildParameter_NoError",
-      "Time": 0,
-      "SystemOut": null,
-      "FailureMessage": ""
-    },
-    {
-      "Passed": true,
-      "Name": "TestsQualityGate",
-      "Classname": "CICD.Tests.CICDTests.PlayerSettings_Version_IsNotEmpty",
-      "Time": 0,
       "SystemOut": null,
       "FailureMessage": ""
     },
@@ -198,7 +58,6 @@ Just copy the existing Assets/Editor folder to your project and it's ready to go
       "Passed": false,
       "Name": null,
       "Classname": "MissedRefsQualityGate",
-      "Time": 0,
       "SystemOut": "Failed",
       "FailureMessage": "Missed scrpits in the prefab : PrefabWithMissingScript"
     },
@@ -206,7 +65,6 @@ Just copy the existing Assets/Editor folder to your project and it's ready to go
       "Passed": false,
       "Name": null,
       "Classname": "MissedRefsQualityGate",
-      "Time": 0,
       "SystemOut": "Failed",
       "FailureMessage": "Missed scripts on the scene:  in Main Camera"
     },
@@ -214,7 +72,6 @@ Just copy the existing Assets/Editor folder to your project and it's ready to go
       "Passed": false,
       "Name": null,
       "Classname": "MissedRefsQualityGate",
-      "Time": 0,
       "SystemOut": "Failed",
       "FailureMessage": "Missed scripts on the scene:  in InstanceOfThePrefab"
     },
@@ -222,7 +79,6 @@ Just copy the existing Assets/Editor folder to your project and it's ready to go
       "Passed": false,
       "Name": null,
       "Classname": "MissedRefsQualityGate",
-      "Time": 0,
       "SystemOut": "Failed",
       "FailureMessage": "The scene  has 2 missed refs."
     }
