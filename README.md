@@ -29,7 +29,7 @@ Just copy the existing Editor folder to your project and it's ready to go.
    Unity.exe -batchmode -projectPath %ProjectPath% -executeMethod CICD.CICDQualityGatesRunner.RunQualityGates -outputPath result.txt
    ```
 
-	or in editor you can use the context menu
+or in editor you can use the context menu
 
 ## Contact
 
