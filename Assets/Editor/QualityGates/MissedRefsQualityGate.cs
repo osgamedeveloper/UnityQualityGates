@@ -121,7 +121,7 @@ namespace CICD
             Status = QualityGateStatus.ForceStopped;
         }
 
-        private static bool IsHasCanvasOverlay(GameObject go, bool includeChildren)
+        private static bool IsHasCanvasOverlay(GameObject go)
         {
             if (go.GetComponent<Canvas>() != null)
             {

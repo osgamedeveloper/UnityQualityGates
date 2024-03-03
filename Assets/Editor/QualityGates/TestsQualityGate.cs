@@ -28,7 +28,7 @@ namespace CICD
             PassTestResult(result);
             if (result.FailCount > 0)
             {
-                Info = $"{nameof(TestsQualityGate)} isn't passed..";
+                Info = $"{nameof(TestsQualityGate)} is failed.";
             }
             else
             {
