@@ -3,15 +3,15 @@ Quality Gates for Unity
 =======
 ## Getting Started
 
-This is an example of how you may create a QG setup for your project.
+This is an example of how you may create a Quality Gates setup for your project.
 
 ### Prerequisites
 
-Just copy the existing Assets/Editor folder to your project and it's ready to go.
+Just copy the existing Assets/CICD folder to your project and it's ready to go.
 
 ### Installation
 
-1. Copy Assets/Editor folder to your project
+1. Copy Assets/CICD folder to your project
 2. Use CICD context menu button for additional actions
 3. Develop your own QG by implementing IQualityGate.cs interface
    ```cs
