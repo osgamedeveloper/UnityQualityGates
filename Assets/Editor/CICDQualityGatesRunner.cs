@@ -69,8 +69,10 @@ namespace CICD
                     waitedSeconds++;
                 }
                 result += $"{gate.Name}:{gate.Status}{Environment.NewLine}";
-                foreach(var qgResult in gate.GetResults())
-                    result += $"{qgResult.Classname}|{(qgResult.Passed?"Passed": qgResult.FailureMessage)}{Environment.NewLine}";
+                foreach (var qgResult in gate.GetResults())
+                {
+                    result += $"{qgResult.Classname}:{(qgResult.Passed ? "Passed" : qgResult.FailureMessage)}{Environment.NewLine}";
+                }
             }
 
             bool qgPassed = gates.All(gate => gate.Status == QualityGateStatus.Passed);

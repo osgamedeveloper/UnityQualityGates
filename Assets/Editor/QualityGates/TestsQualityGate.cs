@@ -5,6 +5,9 @@ using UnityEditor.TestTools.TestRunner.Api;
 
 namespace CICD
 {
+    /// <summary>
+    /// Quality Gate runs all existed editor mode tests and provide the quality gate result
+    /// </summary>
     public class TestsQualityGate : IQualityGate
     {
         private readonly List<QualityGateResult> _qualityGateResults = new List<QualityGateResult>();
@@ -64,12 +67,13 @@ namespace CICD
                 string testName =
                     $"{resultAdaptor.Test.FullName.Split('(', StringSplitOptions.RemoveEmptyEntries).FirstOrDefault()}";
                 //We leave resultAdaptor.Duration what we obviously should use in a real project.
-                _qualityGateResults.Add(new QualityGateResult(
-                    isPassed,
-                    Name,
-                    testName,
-                    resultAdaptor.Message,
-                    isPassed ? "" : $"{resultAdaptor.Message} | {resultAdaptor.Output}"));
+                _qualityGateResults.Add(
+                    new QualityGateResult(
+                        isPassed,
+                        Name,
+                        testName,
+                        resultAdaptor.Message,
+                        isPassed ? "" : $"{resultAdaptor.Message}:{resultAdaptor.Output}"));
             }
         }
     }

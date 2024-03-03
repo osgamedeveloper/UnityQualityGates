@@ -8,8 +8,13 @@ using UnityEngine.SceneManagement;
 
 namespace CICD
 {
+    /// <summary>
+    /// Quality gate checks all existed scenes and prefabs for missing refs
+    /// </summary>
     public class MissedRefsQualityGate : IQualityGate
     {
+        private const string filterPrefabs = "t:Prefab";
+
         private readonly List<QualityGateResult> _results = new();
         public QualityGateStatus Status { get; private set; }
         public string Name => $"{nameof(MissedRefsQualityGate)}";
@@ -21,7 +26,7 @@ namespace CICD
 
             try
             {
-                var prefabsWithMissing = AssetDatabase.FindAssets("t:Prefab")
+                var prefabsWithMissing = AssetDatabase.FindAssets(filterPrefabs)
                     .Select(AssetDatabase.GUIDToAssetPath)
                     .Select(AssetDatabase.LoadAssetAtPath<GameObject>);
 
@@ -30,9 +35,11 @@ namespace CICD
                     bool hasMissed = IsMissing(prefabWithMissed.gameObject, true);
                     if (hasMissed)
                     {
-                        _results.Add(new QualityGateResult(
+                        _results.Add(
+                            new QualityGateResult(
                             false, Info, Name,
-                            QualityGateStatus.Failed.ToString(), $"MISSED SCRIPTS IN THE PREFAB {prefabWithMissed.name}"));
+                            QualityGateStatus.Failed.ToString(), 
+                            $"Missed scrpits in the prefab : {prefabWithMissed.name}"));
                     }
                 }
 
@@ -54,7 +61,8 @@ namespace CICD
                     {
                         _results.Add(new QualityGateResult(
                             false, Info, Name,
-                            QualityGateStatus.Failed.ToString(), $"MISSED SCRIPT ON SCENE {scene.name} IN {missedScriptOnScene.name}"));
+                            QualityGateStatus.Failed.ToString(), 
+                            $"Missed scripts on the scene: {scene.name} in {missedScriptOnScene.name}"));
                         amountOfMissedRefs++;
                     }
 
@@ -62,20 +70,26 @@ namespace CICD
                     {
                         _results.Add(new QualityGateResult(
                             false, Info, Name,
-                            QualityGateStatus.Failed.ToString(), $"THE SCENE {scene.name} HAS {amountOfMissedRefs} MISSED REFS"));
+                            QualityGateStatus.Failed.ToString(), 
+                            $"The scene {scene.name} has {amountOfMissedRefs} missed refs."));
                     }
                     else
                     {
                         _results.Add(new QualityGateResult(
                             true, Info, Name,
-                            systemOut: QualityGateStatus.Passed.ToString(), $"THE SCENE {scene.name} HAS NO MISSED REFS"));
+                            systemOut: QualityGateStatus.Passed.ToString(), 
+                            $"The scene {scene.name} has no missing refs."));
                     }
 
                 }
 
                 if (_results.All(result => result.Passed))
                 {
-                    _results.Add(new QualityGateResult(true, Name, Name, QualityGateStatus.Passed.ToString(),
+                    _results.Add(new QualityGateResult(
+                        true, 
+                        Name, 
+                        Name, 
+                        QualityGateStatus.Passed.ToString(),
                         Info));
                     Status = QualityGateStatus.Passed;
                     return;
